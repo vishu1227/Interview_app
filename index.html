@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interview</title>
+    <!--auto compiled css & Js-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js">
+    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+    <link rel="stylesheet" href="display_user.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Company</li>
+        </ul>
+        <div id="icon">
+            <img id="company_logo" src="/company_log.png" alt="Company logo">
+        </div>
+    </nav>
+    <section>
+        <div id="client" class="client_report">
+            <div class="client_sec">
+                <img src="/client_logo.jpg" alt="">
+                <p>client Name</p>
+            </div>
+            <!-- <div class="client_sec"> -->
+            <div id='myChart'></div>
+            <!-- </div> -->
+        </div>
+        <center>
+            <div id="sec2">
+                <table id="mytable">
+                    <tr>
+                        <th>Question</th>
+                        <th>Rating</th>
+                        <th>Comments</th>
+                    </tr>
+                </table>
+            </div>
+        </center>
+        <div id="question_and_video">
+            <!-- <div id="slide_show"> -->
+            <center>
+                <div class="slideshow-container">
+
+                    <div class="mySlides">
+                        <a onclick="activeQues('ques1')" id="ques1" class="ques">Q1 orem ipsum dolor sit amet
+                            consectetur adipisicing elit. Repudiandae vitae voluptas, </a>
+                    </div>
+
+                    <div class="mySlides">
+                        <a onclick="activeQues('ques2')" id="ques2" class="ques">Q2 kbecyvcbb sit amet
+                            consectetur aoinfiuwee vitae voluptas, </a>
+                    </div>
+
+                    <div class="mySlides">
+                        <a onclick="activeQues('ques3')" id="ques3" class="ques">Q3 iuhfiwbf sit amet
+                            consecteturoiewiuwebfoindiuoh vitae voluptas, </a>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </center>
+            <div id="ques_video">
+                <iframe id="video"
+                    src="https://www.youtube.com/embed/lsJBGvyiAHI?list=PLQpF--VlgguQR9WEbd9ymew9u_sb_2MU5">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- </div> -->
+        </div>
+        <div id="comm_review">
+            <div id="grade">
+                <div class="container">
+                    <div class="rating-wrap">
+                        <h2>Star Rating</h2>
+                        <div class="center">
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" class="full"
+                                    title="Awesome"></label>
+                                <input type="radio" id="star4.5" name="rating" value="4.5" /><label for="star4.5"
+                                    class="half"></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                    class="full"></label>
+                                <input type="radio" id="star3.5" name="rating" value="3.5" /><label for="star3.5"
+                                    class="half"></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                    class="full"></label>
+                                <input type="radio" id="star2.5" name="rating" value="2.5" /><label for="star2.5"
+                                    class="half"></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                    class="full"></label>
+                                <input type="radio" id="star1.5" name="rating" value="1.5" /><label for="star1.5"
+                                    class="half"></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                    class="full"></label>
+                                <input type="radio" id="star0.5" name="rating" value="0.5" /><label for="star0.5"
+                                    class="half"></label>
+                            </fieldset>
+                        </div>
+                        <h4 id="rating-value"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <textarea name="comments" id="cmnt_section" cols="30" rows="5" placeholder="Any comment?"></textarea>
+                <center>
+                    <button id='save_btn' onclick="Save_fun('0')">Save</button>
+                    <button onclick="Save_fun('1')" style="display: none;" id='save_next'>Save and next</button>
+                </center>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script src="/display_user.js"></script>
+
+</html>
